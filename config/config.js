@@ -1,4 +1,4 @@
 module.exports = {
-    USER: 'r_cardol@hotmail.com', 
-    PASS: 'qiwjmduI!oIhfc$a'
+    USER: process.env.REACT_APP_API_EMAIL, 
+    PASS: process.env.REACT_APP_API_PASS
 }

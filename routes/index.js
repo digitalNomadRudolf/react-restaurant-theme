@@ -4,7 +4,7 @@ var nodemailer = require('nodemailer');
 const creds = require('../config/config');
 
 var transport = {
-    host: 'smtp.live.com',
+    host: 'smtp.ethereal.email',
     auth: {
         user: creds.USER,
         pass: creds.PASS
@@ -29,7 +29,7 @@ router.post('/send', (req, res, next) => {
 
     var mail = {
         from: name,
-        to: 'r_cardol@hotmail.com',
+        to: process.env.REACT_APP_API_EMAIL,
         subject: 'New message from contact form',
         text: content
     }
