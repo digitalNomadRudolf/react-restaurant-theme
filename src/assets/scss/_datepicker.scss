@@ -1,0 +1,72 @@
+#dp_datepicker {
+    position: absolute;
+    display: inline-block;
+    border: 1px solid #ccc;
+    background: #fcfcfc;
+    width: 255px;
+    border-radius: 2px;
+}
+#dp_datepicker #dpHead {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 1px solid #fcfcfc;
+    margin: 2px 2px 0px 2px;
+    padding-top: 5px;
+    font-weight: bold;
+}
+#dp_datepicker #dpHead .dpNav {
+    width: 28px;
+    cursor: pointer;
+    height: 20px;
+    border: 1px solid #fcfcfc;
+    /* background: #ccc; */
+    line-height: 20px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+    border-radius: 2px;
+}
+#dp_datepicker #dpHead .dpNav:hover {
+    border: 1px solid #ccc;
+    background: #eee;
+}
+#dp_datepicker #dpMonth {
+    width: 150px;
+    text-align: center;
+    line-height: 20px;
+    padding-top: 3px;
+}
+#dp_datepicker #dpBody {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 255px;
+    padding-bottom: 2px;
+}
+#dp_datepicker .dpDay, #dp_datepicker .dpDayCol {
+    width: 40px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin-top: 4px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+#dp_datepicker .dpDayCol {
+    border: 0px;
+    padding: 1px;
+}
+#dp_datepicker .dpDay.today {
+    /*background: #9f9;*/
+    border: 1px solid #69f;
+}
+#dp_datepicker .dpDay.selected, #dp_datepicker .dpDay:hover {
+    background: #6d6;
+}
+#dp_datepicker .dpDay.other_month {
+    color: #aaa;
+}

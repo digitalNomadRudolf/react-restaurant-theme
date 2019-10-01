@@ -1,3 +1,15 @@
-body {
-    color:royalblue;
-}
+@import './mixins';
+@import './base';
+@import './grid';
+@import './variables';
+@import './navigation';
+@import './hero';
+@import './menu';
+@import './dining-room';
+@import './booking';
+@import './datepicker';
+@import './contactform';
+@import './cuisine';
+@import './food-gallery';
+@import './quote';
+@import './footer';
