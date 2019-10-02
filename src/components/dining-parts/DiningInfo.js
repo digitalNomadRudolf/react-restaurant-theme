@@ -29,7 +29,7 @@ export default class DiningInfo extends Component {
         this.setState({
             name: '',
             email: '',
-            message: '';
+            message: ''
         });
     }
 
