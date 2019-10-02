@@ -168,7 +168,7 @@ export default class DiningInfo extends Component {
                                 : this.state.errorField ? (<ErrorField />) : ''
                         }
 
-                        <form method="POST" name="contact" onSubmit={this.handleFormSubmit} className="contact-form" id="contact-form" data-netlify="true">
+                        <form method="POST" name="contact" className="contact-form" id="contact-form" data-netlify="true">
                             <div className={`form-group ${this.errorClass(this.state.formErrors.name)}`}>
                             <label htmlFor="name">Name</label>
                             <input 
