@@ -168,7 +168,7 @@ export default class DiningInfo extends Component {
                                 : this.state.errorField ? (<ErrorField />) : ''
                         }
 
-                        <form method="POST" onSubmit={this.handleFormSubmit} action="" className="contact-form" id="contact-form" >
+                        <form method="POST" onSubmit={this.handleFormSubmit} className="contact-form" id="contact-form" data-netlify="true">
                             <div className={`form-group ${this.errorClass(this.state.formErrors.name)}`}>
                             <label htmlFor="name">Name</label>
                             <input 
@@ -202,6 +202,13 @@ export default class DiningInfo extends Component {
                                 onChange={this.handleMessageInput}
                                 value={this.state.message}
                                 ></textarea>
+
+                            <div className="field">
+                                <div data-netlify-recaptcha="true">
+
+                                </div>
+                            </div>
+
                             <input type="submit" disabled={!this.state.formValid} className="btn btn-primary" value={this.state.isLoading ? 'loading...' : 'Send'} />
                             
                         </form>
