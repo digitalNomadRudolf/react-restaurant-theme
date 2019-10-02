@@ -76,7 +76,7 @@ export default class DiningInfo extends Component {
     }
 
     handleSubmit = (e) => {
-        event.preventDefault();
+        e.preventDefault();
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const message = document.getElementById('message').value;
