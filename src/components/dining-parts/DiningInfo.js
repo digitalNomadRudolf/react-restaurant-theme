@@ -26,7 +26,11 @@ export default class DiningInfo extends Component {
     
     resetForm = () => {
         document.getElementById('contact-form').reset();
-        console.log('i was resetted!')
+        this.setState({
+            name: '',
+            email: '',
+            message: '';
+        });
     }
 
     handleUserInput = (e) => {
@@ -82,9 +86,6 @@ export default class DiningInfo extends Component {
 
         this.setState({isLoading: false});
         this.setState({successField: !this.state.successField});
-        name = '';
-        email = '';
-        message = '';
         this.resetForm();
     }
 
@@ -194,7 +195,7 @@ export default class DiningInfo extends Component {
 
                             <div data-netlify-recaptcha="true"></div>
 
-                            <input type="submit" onClick={this.resetForm} disabled={!this.state.formValid} className="btn btn-primary" value={this.state.isLoading ? 'loading...' : 'Send'} />
+                            <input type="submit" disabled={!this.state.formValid} className="btn btn-primary" value={this.state.isLoading ? 'loading...' : 'Send'} />
                             
                         </form>
                     </div>
