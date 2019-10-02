@@ -169,6 +169,7 @@ export default class DiningInfo extends Component {
                         }
 
                         <form method="POST" name="contact" data-netlify-recaptcha="true" className="contact-form" id="contact-form" data-netlify="true">
+                            <input type="hidden" name="contact" value="contact" />
                             <div className={`form-group ${this.errorClass(this.state.formErrors.name)}`}>
                             <label htmlFor="name">Name</label>
                             <input 
