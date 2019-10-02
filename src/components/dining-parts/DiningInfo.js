@@ -79,8 +79,9 @@ export default class DiningInfo extends Component {
         const message = document.getElementById('message').value;
         this.setState({isLoading: true});
 
-        this.setState({isLoading: false})
-        this.setState({successField: !this.state.successField})
+        this.setState({isLoading: false});
+        this.setState({successField: !this.state.successField});
+        this.resetForm();
     }
 
     
