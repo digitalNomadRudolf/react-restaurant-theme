@@ -24,7 +24,10 @@ export default class DiningInfo extends Component {
         }
     }
 
-    resetForm = () => {
+    
+    
+    
+    Form = () => {
         document.getElementById('contact-form').reset();
     }
 
@@ -168,8 +171,8 @@ export default class DiningInfo extends Component {
                                 : this.state.errorField ? (<ErrorField />) : ''
                         }
 
-                        <form method="POST" action="POST" name="contact" data-netlify-recaptcha="true" className="contact-form" id="contact-form" data-netlify="true">
-                            <input type="hidden" name="contact" value="contact" />
+                        <form method="POST" name="contact" data-netlify-recaptcha="true" className="contact-form" id="contact-form" data-netlify="true">
+                            
                             <div className={`form-group ${this.errorClass(this.state.formErrors.name)}`}>
                             <label htmlFor="name">Name</label>
                             <input 
@@ -206,7 +209,7 @@ export default class DiningInfo extends Component {
 
                             <div data-netlify-recaptcha="true"></div>
 
-                            <button type="submit" disabled={!this.state.formValid} className="btn btn-primary" value={this.state.isLoading ? 'loading...' : 'Send'}>Send</button>
+                            <button type="submit" disabled={!this.state.formValid} className="btn btn-primary"></button>
                             
                         </form>
                     </div>
