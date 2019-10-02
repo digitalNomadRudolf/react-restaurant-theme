@@ -220,7 +220,7 @@ export default class DiningInfo extends Component {
 
                             <div data-netlify-recaptcha="true"></div>
 
-                            <button type="submit" className="btn btn-primary"></button>
+                            <button type="submit" className="btn btn-primary">Send</button>
                             
                         </form>
                     </div>
