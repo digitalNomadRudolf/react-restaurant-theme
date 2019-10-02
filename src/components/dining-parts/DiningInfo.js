@@ -22,12 +22,9 @@ export default class DiningInfo extends Component {
             errorField: false,
             mailSent: false
         }
-    }
-
+    }    
     
-    
-    
-    Form = () => {
+    resetForm = () => {
         document.getElementById('contact-form').reset();
     }
 
@@ -75,8 +72,8 @@ export default class DiningInfo extends Component {
         return (error.length === 0 ? '' : 'has-error');
     }
 
-    handleSubmit = (e) => {
-        e.preventDefault();
+    handleSubmit = (event) => {
+        event.preventDefault();
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const message = document.getElementById('message').value;
@@ -86,34 +83,6 @@ export default class DiningInfo extends Component {
         this.setState({successField: !this.state.successField})
     }
 
-    handleFormSubmit = (event) => {
-        event.preventDefault();
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-            
-        this.setState({isLoading: true})
-
-            axios({
-                method: "POST",
-                /*url: "http://localhost:3002/send",*/
-                data: {
-                    name: name,
-                    email: email,
-                    message: message
-                }
-            }).then((response) => {
-                if(response.data.msg === 'success') {
-                    // success result: take away the alert and make a separate div that shows the message next to the 
-                    // send button. same for the failed result.
-                    this.setState({isLoading: false})
-                    this.setState({successField: !this.state.successField})
-                    this.resetForm();
-                } else if(response.data.msg === 'fail') {
-                    this.setState({errorField: !this.state.errorField})
-                }
-            })
-    }
     
     render() {
     console.log(this.props)
@@ -220,7 +189,7 @@ export default class DiningInfo extends Component {
 
                             <div data-netlify-recaptcha="true"></div>
 
-                            <button type="submit" className="btn btn-primary">Send</button>
+                            <input type="submit" disabled={!this.state.formValid} className="btn btn-primary" value={this.state.isLoading ? 'loading...' : 'Send'} />
                             
                         </form>
                     </div>
