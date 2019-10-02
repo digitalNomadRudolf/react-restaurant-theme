@@ -75,6 +75,17 @@ export default class DiningInfo extends Component {
         return (error.length === 0 ? '' : 'has-error');
     }
 
+    handleSubmit = (e) => {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        this.setState({isLoading: true});
+
+        this.setState({isLoading: false})
+        this.setState({successField: !this.state.successField})
+    }
+
     handleFormSubmit = (event) => {
         event.preventDefault();
         const name = document.getElementById('name').value;
@@ -171,7 +182,7 @@ export default class DiningInfo extends Component {
                                 : this.state.errorField ? (<ErrorField />) : ''
                         }
 
-                        <form method="POST" name="contact" data-netlify-recaptcha="true" className="contact-form" id="contact-form" data-netlify="true">
+                        <form method="POST" name="contact" onSubmit={this.handleSubmit} data-netlify-recaptcha="true" className="contact-form" id="contact-form" data-netlify="true">
                             
                             <div className={`form-group ${this.errorClass(this.state.formErrors.name)}`}>
                             <label htmlFor="name">Name</label>
