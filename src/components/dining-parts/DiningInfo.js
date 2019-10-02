@@ -31,7 +31,8 @@ export default class DiningInfo extends Component {
             email: '',
             message: '',
             formValid: false,
-            isLoading: false
+            isLoading: false,
+            successField: !this.state.successField
         });
     }
 
@@ -85,8 +86,6 @@ export default class DiningInfo extends Component {
         const email = document.getElementById('email').value;
         const message = document.getElementById('message').value;
         this.setState({isLoading: true});
-
-        this.setState({isLoading: false});
         this.setState({successField: !this.state.successField});
         this.resetForm();
     }
