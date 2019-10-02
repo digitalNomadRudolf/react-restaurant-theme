@@ -82,7 +82,7 @@ export default class DiningInfo extends Component {
 
             axios({
                 method: "POST",
-                url: "http://localhost:3002/send",
+                /*url: "http://localhost:3002/send",*/
                 data: {
                     name: name,
                     email: email,
@@ -168,7 +168,7 @@ export default class DiningInfo extends Component {
                                 : this.state.errorField ? (<ErrorField />) : ''
                         }
 
-                        <form method="POST" onSubmit={this.handleFormSubmit} className="contact-form" id="contact-form" data-netlify="true">
+                        <form method="POST" name="contact" onSubmit={this.handleFormSubmit} className="contact-form" id="contact-form" data-netlify="true">
                             <div className={`form-group ${this.errorClass(this.state.formErrors.name)}`}>
                             <label htmlFor="name">Name</label>
                             <input 
@@ -196,7 +196,7 @@ export default class DiningInfo extends Component {
                             </div>
                             <label>Message</label>
                             <textarea 
-                                name="subject" 
+                                name="message" 
                                 id="message" 
                                 placeholder="Your message..."
                                 onChange={this.handleMessageInput}
