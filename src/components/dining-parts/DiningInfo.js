@@ -32,7 +32,7 @@ export default class DiningInfo extends Component {
             message: '',
             formValid: false,
             isLoading: false,
-            successField: !this.state.successField
+            successField: false
         });
     }
 
