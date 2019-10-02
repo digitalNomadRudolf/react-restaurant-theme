@@ -31,9 +31,14 @@ export default class DiningInfo extends Component {
             email: '',
             message: '',
             formValid: false,
-            isLoading: false,
-            successField: false
+            isLoading: false
         });
+            
+        setTimeout(() => {
+            this.setState({
+                successField: false
+            });
+        }, 5000);
     }
 
     handleUserInput = (e) => {
