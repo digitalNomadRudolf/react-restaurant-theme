@@ -29,7 +29,9 @@ export default class DiningInfo extends Component {
         this.setState({
             name: '',
             email: '',
-            message: ''
+            message: '',
+            formValid: false,
+            isLoading: false
         });
     }
 
