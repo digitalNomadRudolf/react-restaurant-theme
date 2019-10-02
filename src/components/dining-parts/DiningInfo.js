@@ -26,6 +26,7 @@ export default class DiningInfo extends Component {
     
     resetForm = () => {
         document.getElementById('contact-form').reset();
+        console.log('i was resetted!')
     }
 
     handleUserInput = (e) => {
