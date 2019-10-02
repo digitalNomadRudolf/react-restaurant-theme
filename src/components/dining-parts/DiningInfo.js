@@ -203,11 +203,7 @@ export default class DiningInfo extends Component {
                                 value={this.state.message}
                                 ></textarea>
 
-                            <div className="field">
-                                <div data-netlify-recaptcha="true">
-
-                                </div>
-                            </div>
+                            <div data-netlify-recaptcha="true"></div>
 
                             <input type="submit" disabled={!this.state.formValid} className="btn btn-primary" value={this.state.isLoading ? 'loading...' : 'Send'} />
                             
